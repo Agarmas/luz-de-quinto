@@ -1,16 +1,21 @@
 ---
 import logo from '../assets/logo.webp';
 import styles from './Header.module.css';
+
+const site = Astro.site ?? import.meta.env.SITE ?? '';
+const baseHref = site ? new URL('.', site).pathname : '/';
+const resolveHref = (path) =>
+	site ? new URL(path.replace(/^\/+/, ''), site).pathname : `/${path.replace(/^\/+/, '')}`;
 ---
 <header class={styles.siteHeader}>
-	<a class={styles.brand} href="/">
+	<a class={styles.brand} href={baseHref}>
 		<img src={logo.src} alt="Luz de Quinto" width="46" height="46" />
 		<span>Luz de Quinto</span>
 	</a>
 	<nav class={styles.siteNav} aria-label="Navegación principal">
-		<a href="/">Inicio</a>
-		<a href="/formacion">Formación</a>
-		<a href="/sacramentos">Sacramentos</a>
-		<a href="/contacto">Contacto</a>
+		<a href={baseHref}>Inicio</a>
+		<a href={resolveHref('formacion')}>Formación</a>
+		<a href={resolveHref('sacramentos')}>Sacramentos</a>
+		<a href={resolveHref('contacto')}>Contacto</a>
 	</nav>
 </header>

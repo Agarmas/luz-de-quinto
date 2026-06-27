@@ -1,5 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const site = Astro.site ?? import.meta.env.SITE ?? '';
+const resolveHref = (path) =>
+	site ? new URL(path.replace(/^\/+/, ''), site).pathname : `/${path.replace(/^\/+/, '')}`;
 ---
 
 <Layout title="Luz de Quinto | Inicio" description="Quiénes somos y qué hacemos en el grupo juvenil de Montequinto.">
@@ -11,8 +15,8 @@ import Layout from '../layouts/Layout.astro';
 				Somos un grupo de jóvenes como tú de la parroquia Nuestra Señora de los Ángeles y San José de Calasanz de Montequinto. Aquí te invitamos a vivir la fe con amigos, compartir tus preguntas y sentirte bienvenido.
 			</p>
 			<div class="hero-buttons">
-				<a class="button primary" href="/formacion">Ver formación</a>
-				<a class="button secondary" href="/sacramentos">Sacramentos</a>
+				<a class="button primary" href={resolveHref('formacion')}>Ver formación</a>
+				<a class="button secondary" href={resolveHref('sacramentos')}>Sacramentos</a>
 			</div>
 		</div>
 		<div class="hero-visual">
