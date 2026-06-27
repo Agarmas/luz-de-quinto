@@ -1,7 +1,7 @@
 ---
 import styles from './Footer.module.css';
 
-const baseUrl = import.meta.env.BASE_URL;
+const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 ---
 <footer class={styles.siteFooter}>
 	<p class={styles.footerText}>© 2026 Luz de Quinto</p>

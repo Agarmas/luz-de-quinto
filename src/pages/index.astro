@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const baseUrl = import.meta.env.BASE_URL;
+const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 ---
 
 <Layout title="Luz de Quinto | Inicio" description="Quiénes somos y qué hacemos en el grupo juvenil de Montequinto.">
