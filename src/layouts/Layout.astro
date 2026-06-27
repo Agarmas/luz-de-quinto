@@ -1,0 +1,29 @@
+---
+const { title = 'Luz de Quinto', description = 'Grupo juvenil católico de Montequinto. Formación, sacramentos y acompañamiento en la parroquia Nuestra Señora de los Ángeles y San José de Calasanz.' } = Astro.props;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+	</head>
+	<body>
+		<div class="site-shell">
+			<Header />
+
+			<main class="content-shell">
+				<slot />
+			</main>
+
+			<Footer />
+		</div>
+	</body>
+</html>
