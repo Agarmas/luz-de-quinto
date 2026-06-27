@@ -1,10 +1,12 @@
 ---
 import styles from './Footer.module.css';
+
+const baseUrl = import.meta.env.BASE_URL;
 ---
 <footer class={styles.siteFooter}>
 	<p class={styles.footerText}>© 2026 Luz de Quinto</p>
 	<div class={styles.footerLinks}>
-		<a href=".">Inicio</a>
-		<a href="contacto">Contacto</a>
+		<a href={baseUrl}>Inicio</a>
+		<a href={`${baseUrl}contacto`}>Contacto</a>
 	</div>
 </footer>
