@@ -1,46 +1,65 @@
-# Astro Starter Kit: Basics
+# Luz de Quinto
+
+Sitio web oficial del grupo juvenil católico "Luz de Quinto" en Montequinto, creado con Astro.
+
+## 🌟 Descripción
+
+Esta web presenta:
+- Página de inicio con información del grupo y acceso directo a secciones clave.
+- Página de formación para los encuentros y actividades.
+- Página de sacramentos con detalles sobre acompañamiento espiritual.
+- Página de contacto para comunicarse con el equipo.
+
+El proyecto está preparado para desplegar en GitHub Pages bajo la ruta:
+`https://agarmas.github.io/luz-de-quinto/`.
+
+## 📁 Estructura principal
+
+- `src/pages/` - páginas públicas de la web: `index.astro`, `formacion.astro`, `sacramentos.astro`, `contacto.astro`.
+- `src/layouts/Layout.astro` - plantilla base común para todas las páginas.
+- `src/components/` - componentes reutilizables como `Header.astro` y `Footer.astro`.
+- `src/styles/global.css` - estilos globales y reglas responsive.
+- `astro.config.mjs` - configuración de Astro, incluida la base del sitio para GitHub Pages.
+
+## 🚀 Tecnología
+
+- Astro `^7.0.3`
+- HTML/CSS
+- JavaScript mínimo para navegación y rutas
+
+## 🧰 Scripts disponibles
+
+Desde la raíz del proyecto:
 
 ```sh
-npm create astro@latest -- --template basics
+npm install
+npm run dev
+npm run build
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- `npm install` - instala dependencias.
+- `npm run dev` - levanta un servidor local de desarrollo.
+- `npm run build` - genera la versión estática en `dist/`.
+- `npm run preview` - vista previa de la versión de producción local.
 
-## 🚀 Project Structure
+## 📱 Responsive
 
-Inside of your Astro project, you'll see the following folders and files:
+El sitio incluye reglas CSS para adaptarse a pantallas pequeñas:
+- Encabezado y navegación ajustados en dispositivos móviles.
+- Contenido de la página principal y secciones en una sola columna en anchos pequeños.
+- Botones y acciones amplios para mejor usabilidad táctil.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## 🌍 Despliegue en GitHub Pages
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+La configuración de `astro.config.mjs` incluye:
+- `site: 'https://agarmas.github.io/luz-de-quinto/'`
+- `base: '/luz-de-quinto/'`
 
-## 🧞 Commands
+Esto permite desplegar el sitio correctamente en GitHub Pages sin errores 404 en rutas internas.
 
-All commands are run from the root of the project, from a terminal:
+## 📌 Notas
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Asegúrate de usar Node.js `>=22.12.0`.
+- El contenido del sitio está en español.
+- Para agregar nuevas páginas, crea archivos `.astro` en `src/pages` y actualiza la navegación en `Header.astro`.
