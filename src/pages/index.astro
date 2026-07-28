@@ -7,40 +7,106 @@ const baseUrl = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') + '/';
 <Layout title="Luz de Quinto | Inicio" description="Quiénes somos y qué hacemos en el grupo juvenil de Montequinto.">
 	<section class="hero-panel">
 		<div class="hero-copy">
-			<p class="eyebrow">Quiénes somos</p>
 			<h1>Luz de Quinto</h1>
+			<h2>Grupo jóven de la Parroquia Nuestra Señora de los Ángeles y San José de Calasanz</h2>
 			<p class="hero-text">
-				Somos un grupo de jóvenes como tú de la parroquia Nuestra Señora de los Ángeles y San José de Calasanz de Montequinto. Aquí te invitamos a vivir la fe con amigos, compartir tus preguntas y sentirte bienvenido.
+				Somos un grupo de jóvenes como tú de la parroquia Nuestra Señora de los Ángeles y San José de Calasanz de Montequinto. Aquí te invitamos a vivir la fe con amigos, compartir tus preguntas y conocer cada día mejor a Dios.
 			</p>
-			<div class="hero-actions">
-				<a class="button primary" href={`${baseUrl}formacion`}>Ver formación</a>
-				<a class="button secondary" href={`${baseUrl}sacramentos`}>Sacramentos</a>
-			</div>
-		</div>
-		<div class="hero-visual">
-			<div class="hero-card">
-				<h2>Nuestros pilares</h2>
-				<ul>
-					<li>Formación continua</li>
-					<li>Acercamiento a los sacramentos</li>
-					<li>Encuentros, oración y servicio comunitario</li>
-				</ul>
-			</div>
 		</div>
 	</section>
 
-	<section class="info-grid">
-		<article>
-			<h3>Formación</h3>
-			<p>Cada domingo nos juntamos para hablar de lo que importa, escuchar juntos y hacer que la fe sea cercana y real.</p>
-		</article>
-		<article>
-			<h3>Sacramentos</h3>
-			<p>Vive los sacramentos como momentos que te ayudan a crecer, creer y sentir que eres parte de algo más grande.</p>
-		</article>
-		<article>
-			<h3>Comunidad</h3>
-			<p>Un espacio en el que puedes ser tú mismo, compartir con otros y apoyarte en una familia de fe auténtica.</p>
-		</article>
+	<section class="fides-et-ratio-section">
+		<div class="quote-container">
+			<p class="quote-text">
+				"Yo soy el camino y la verdad y la vida. Nadie va al Padre sino por mí".
+			</p>
+			<p class="quote-attribution">Jn 14, 6</p>
+		</div>
+	</section>
+
+	<section class="value-tabs" aria-label="Nuestros ejes de vida">
+		<details class="tab-accordion" open>
+			<summary class="tab-summary">
+				<div class="tab-icon">👥</div>
+				<div class="tab-header">
+					<span class="tab-label">Camino</span>
+					<h3>La comunidad te acompaña</h3>
+				</div>
+			</summary>
+			<div class="tab-content">
+				<p>No caminas solo. La comunidad es el corazón de nuestra fe. En los encuentros dominicales abordamos temas de teología profunda conectados con tu vida actual, con preguntas que te desafían a pensar y reflexionar juntos.</p>
+				<ul class="tab-highlights">
+					<li>Encuentros semanales de teología viva</li>
+					<li>Reflexión y debate sobre fe y actualidad</li>
+					<li>Espacio seguro para tus preguntas</li>
+				</ul>
+			</div>
+		</details>
+
+		<details class="tab-accordion">
+			<summary class="tab-summary">
+				<div class="tab-icon">🧠</div>
+				<div class="tab-header">
+					<span class="tab-label">Verdad</span>
+					<h3>La razón ilumina la fe</h3>
+				</div>
+			</summary>
+			<div class="tab-content">
+				<p>La inteligencia es un regalo de Dios. Creemos que la razón y el estudio son caminos para comprender mejor nuestra relación con Dios y con el mundo que nos rodea. La verdad es accesible a quienes la buscan con el corazón abierto.</p>
+				<ul class="tab-highlights">
+					<li>Estudio profundo de la teología</li>
+					<li>Diálogo entre fe y ciencia</li>
+					<li>Formación para vivir en el mundo actual</li>
+				</ul>
+				
+				<div class="quote-inner">
+					<p class="quote-text-inner">
+						"La fe y la razón (Fides et ratio) son como las dos alas con las cuales el espíritu humano se eleva hacia la contemplación de la verdad. Dios ha puesto en el corazón del hombre el deseo de conocer la verdad y, en definitiva, de conocerle a Él para que, conociéndolo y amándolo, pueda alcanzar también la plena verdad sobre sí mismo".
+					</p>
+					<p class="quote-attribution-inner">Fides et ratio, 1 — San Juan Pablo II</p>
+				</div>
+			</div>
+		</details>
+
+		<details class="tab-accordion">
+			<summary class="tab-summary">
+				<div class="tab-icon">⛪</div>
+				<div class="tab-header">
+					<span class="tab-label">Vida</span>
+					<h3>Los sacramentos nos transforman</h3>
+				</div>
+			</summary>
+			<div class="tab-content">
+				<p>La vida sacramental es el corazón de la fe viva. En comunidad celebramos la Eucaristía y la Reconciliación, momentos en los que experimentamos el amor real de Dios. Juntos vivimos cómo los sacramentos nos acercan más a Él y a los hermanos.</p>
+				<ul class="tab-highlights">
+					<li>Celebración comunitaria de la Eucaristía</li>
+					<li>Experiencia del perdón en la Reconciliación</li>
+					<li>Vida sacramental que transforma</li>
+				</ul>
+			</div>
+		</details>
+	</section>
+
+	<section class="contact-hero" id="contacto">
+		<div class="contact-copy">
+			<p class="eyebrow">Contacto</p>
+			<h2>Queremos conocerte</h2>
+			<p>Si sientes curiosidad por venir, preguntar o simplemente pasar un rato con nosotros, estaremos encantados de recibirte.</p>
+		</div>
+		<div class="contact-cards">
+			<article>
+				<h3>Parroquia</h3>
+				<a href="https://www.parroquiaangelescalasanz.com/" target="_blank" rel="noopener noreferrer">Nuestra Señora de los Ángeles y San José de Calasanz</a>
+				<p>Montequinto, Sevilla</p>
+			</article>
+			<article>
+				<h3>Correo</h3>
+				<a href="mailto:luzdequinto@protonmail.com">luzdequinto@protonmail.com</a>
+			</article>
+			<article>
+				<h3>Instagram</h3>
+				<a href="https://www.instagram.com/grupojovenluzdequinto/" target="_blank" rel="noopener noreferrer">@grupojovenluzdequinto</a>
+			</article>
+		</div>
 	</section>
 </Layout>
